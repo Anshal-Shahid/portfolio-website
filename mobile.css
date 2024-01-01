@@ -1,0 +1,125 @@
+@media (max-width:700px) {
+    /* header */
+    nav img{
+        width: 16vh !important;
+        height: 14vh !important;
+    }
+    .ul1{
+        font-size: 7vh !important;
+        
+        border-radius: 10px;
+        display: block !important;
+        
+    }
+
+    .ul1-first{
+        animation: menu-first  .5s ease ;
+    }
+    .ul1-second{
+        animation: menu-second .5s ease ;
+    }
+    @keyframes menu-first{
+        to{
+            rotate: -360deg;
+        }
+    }
+    @keyframes menu-second{
+        to{
+            rotate: 360deg;
+        }
+    }
+    .menubar{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: rgb(98, 255, 255);
+        background-color: rgb(56, 56, 56);
+        z-index: 10;
+        border-left: 6px solid rgb(98, 255, 255);
+        border-bottom-left-radius: 15px;
+        border-top-left-radius: 15px;
+        position:absolute;
+        right: 0;
+        width: 0;
+        height: 90.5vh;
+        text-transform: uppercase;
+        
+        list-style: none;
+        font-size: 5vh;
+        display: flex!important;
+
+        
+    }
+    .menubar-no{
+        border: none !important;
+    }
+
+    .menubar-animation-first{
+        animation: menubar-first .5s ease forwards;
+    }
+    .menubar-animation-second{
+        animation: menubar-second .4s ease forwards;
+    }
+
+    @keyframes menubar-first {
+     
+        to{
+            width: 80%;
+        }
+        
+    }
+    @keyframes menubar-second {
+       from{
+        width: 80%;
+       }
+        to{
+            width: 0%;
+        }
+        
+    }
+    
+
+    .ul2{
+        display: none !important;
+    }
+
+
+    /* section-1 */
+    .section-1 p {
+        width: 100%;
+        font-size: 2.1vh;
+    }
+
+    .section-1 :nth-child(3) {
+        font-size: 4vh;
+        line-height: 5vh;
+    }
+
+    .section-1 :nth-child(3) span {
+        font-size: 4vh;
+    }
+
+    .section-1 .demo1 {
+        width: 5.5vw;
+        height: 5.5vw;
+        border: .5vw solid rgb(98, 255, 255);
+    }
+
+    .section-1 .demo1 i {
+        font-size: 3.5vw;
+    }
+
+    .section-1 button {
+        width: 28vw;
+        height: 6vh;
+        font-size: 2.9vw !important;
+    }
+
+
+
+
+
+}
