@@ -38,79 +38,34 @@ menu.addEventListener("click", () => {
 
 })
 
+gsap.registerPlugin(ScrollTrigger);
 
-function setupCanvas(){
-    canvas.height =window.innerHeight;
-    canvas.height =window.innerWidth;
+gsap.to(".scroll-nav",{
+    scrollTrigger:{
+        trigger:".scroll-trigger",
+        // markers:true,
+        start:"top top",
+        end:"top bottom ",
+        toggleActions:"restart none reset none"
+
+    },  
+
+    duration:2,   
+    scale:1,
+    opacity:1,
+
+})
+
+// var c=window.getComputedStyle(document.querySelector('.li-1'), ':before').getPropertyValue('content');
+// c.addEventListener("mouseover",()=>{
+//     x()
+// }
+// )
+// function x (){
     
-}
-
-setupCanvas();
-window.onresize =setupCanvas;
-
-const pointer = {
-    x: window.innerWidth / 2,
-    y: window.innerHeight / 2,
-}
-
-
-function updatePointerPosition(e){
-    pointer.x = e.clientX;
-    pointer.y = e.clientY;
-}
-
-window.onclick=updatePointerPosition;
-window.onmousemove=updatePointerPosition;
-
-const ctx = canvas.getContext("2d");
-
-const params ={
-    spring:0.6,
-    pointCount:50
-}
-
-
-const trail =new Array(params.pointCount);
-
-for(let i=0;i< trail.length;i++){
-    trail[i]={
-        x:pointer.x,
-        y:pointer.y,
-        dy:0,
-        dx:0
-    }
-}
-
-
-function draw(){
-    ctx.clearRect( 0, 0, canvas.width,canvas.height);
-
-    trail.forEach((p,idx) =>{
-        const prev =idx === 0 ? pointer : trail[idx - 1];
-        const spring =idx === 0 ? 0.4 * params.spring : params.spring;
-    
-        p.dx= ( prev.x - p.x) * spring;
-        p.dy= ( prev.y - p.y) * spring;
-
-        p.x += p.dx;
-        p.y += p.dy;
-
-        ctx.beginPath();
-        ctx.arc(p.x,p.y,10,0,Math.PI *2 );
-        ctx.fill(); 
-    
-    })
-
-    requestAnimationFrame(draw);
-
-}
-
-draw();
-
-
-
-
-
-
-
+//     gsap.to(c,{
+//         x:-100,
+//         background:"red"
+//     })
+// }
 
