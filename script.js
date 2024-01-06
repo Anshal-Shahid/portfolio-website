@@ -74,7 +74,7 @@ gsap.to("header",{
         toggleActions:"restart none reverse none"
 
     },  
-    opacity:0,
+    scale:0,
     duration:.5
 })
 
