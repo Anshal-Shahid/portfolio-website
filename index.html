@@ -6,7 +6,7 @@
     <!-- gsap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
-<!-- end -->
+    <!-- end -->
     <link rel="stylesheet" href="aos-by-red.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
@@ -21,19 +21,29 @@
     <title>Document</title>
 </head>
 
-<body id="section-1">
+<body id="section-1" style="position: relative;">
     <div class="scroll-nav">
         <ul>
-            <a href="#section-1"><li class="li-1"></li></a>
-            <a href="#about"><li class="li-2"></li></a>
-            <a href="#my-skills"><li class="li-3"></li></a>
-            <a href="#"><li class="li-4"></li></a>
-            <a href="#form"><li class="li-5"></li></a>
+            <a href="#section-1">
+                <li class="li-1"></li>
+            </a>
+            <a href="#section-2">
+                <li class="li-2"></li>
+            </a>
+            <a href="#my-skills">
+                <li class="li-3"></li>
+            </a>
+            <a href="#">
+                <li class="li-4"></li>
+            </a>
+            <a href="#form">
+                <li class="li-5"></li>
+            </a>
 
-       </ul>
-   </div>
-   
-   <header>
+        </ul>
+    </div>
+
+    <header class="sticky">
         <nav class="nav">
             <img src="img/final_logo.png" alt="">
             <a class="ul1 no" style="display: none;">
@@ -42,9 +52,9 @@
             <ul class="ul2">
                 <li><a href="#section-1" style="text-decoration: none; color: white;">Home</a></li>
                 <li><a href="#section-2" style="text-decoration: none; color: white;">About</a></li>
-                <li><a href="" style="text-decoration: none; color: white;">Skills</a></li>
-                <li><a href="" style="text-decoration: none; color: white;">Portfolio</a></li>
-                <li><a href="" style="text-decoration: none; color: white;">Contact</a></li>
+                <li><a href="#my-skills" style="text-decoration: none; color: white;">Skills</a></li>
+                <li><a href="#feature" style="text-decoration: none; color: white;">Portfolio</a></li>
+                <li><a href="#form" style="text-decoration: none; color: white;">Contact</a></li>
             </ul>
         </nav>
 
@@ -63,12 +73,13 @@
     </header>
     <main>
 
-        <div class="section-1"  data-aos="fade-right">
+        <div class="section-1" data-aos="fade-right">
 
             <h2>Hello It's me</h2>
             <h1>Anshal Shahid</h1>
             <h2>and i'm a <span>website developer</span></h2>
-            <p>Lorem ipsum, dolor Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione, in! sit elit. Nam,
+            <p>Lorem ipsum, dolor Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione, in! sit elit.
+                Nam,
                 inventore sit voluptatibus.</p>
 
 
@@ -88,10 +99,11 @@
                     <i class="ri-linkedin-fill"></i>
                 </div>
             </div>
-            <button>Discovered More </button>
+            <button class="scroll-trigger">Discovered More </button>
+
 
         </div>
-        <hr style="opacity: .11;" class="scroll-trigger">
+        <hr style="opacity: .11;" >
         <div class="section-2 " id="section-2">
             <div class="section-2-div" data-aos="zoom-in-right" data-aos-duration="1700">
 
@@ -103,7 +115,7 @@
         </div>
         <hr style="opacity: .11;">
 
-        <div class="section-3" id="about">
+        <div class="section-3" id="feature">
             <h1>core features</h1>
             <div class="features">
                 <div class="feature-1 feature" data-aos="slide-right" data-aos-duration="1000" data-aos-easing="linear">
@@ -253,17 +265,17 @@
                     <label for="msg">your message</label>
                     <textarea name="" id="msg" cols="30" class="input" rows="6" placeholder="Your message*"></textarea>
 
-                    <input type="submit" value="SEND MESSAGE" class="sub" id="submit" >
+                    <input type="submit" value="SEND MESSAGE" class="sub" id="submit">
                 </form>
                 <div class="third-content">
-                    <p data-aos="fade-up">Write an email</p>
-                    <h2 data-aos="fade-up">sample@domain.com</h2>
+                    <p >Write an email</p>
+                    <h2>sample@domain.com</h2>
 
-                    <p data-aos="fade-up">contact us</p>
-                    <h2 data-aos="fade-up">+0321 1234567</h2>
+                    <p >contact us</p>
+                    <h2 >+0321 1234567</h2>
 
 
-                    <div class="btns" data-aos="zoom-in-up" data-aos-delay="500" >
+                    <div class="btns" >
                         <div class="demo1">
                             <i class="ri-facebook-fill"> </i>
                         </div>

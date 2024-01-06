@@ -40,6 +40,15 @@ menu.addEventListener("click", () => {
 
 gsap.registerPlugin(ScrollTrigger);
 
+let header=document.querySelector("header");
+let scroll_nav=document.querySelector(".scroll-nav");
+let style =window.getComputedStyle(scroll_nav)
+
+
+// let myMediaQuery = window.matchMedia('(min-width: 600px)');
+// widthChangeCallback(myMediaQuery);
+// function widthChangeCallback(myMediaQuery) {
+//     if(myMediaQuery.matches){
 gsap.to(".scroll-nav",{
     scrollTrigger:{
         trigger:".scroll-trigger",
@@ -55,6 +64,29 @@ gsap.to(".scroll-nav",{
     opacity:1,
 
 })
+
+gsap.to("header",{
+    scrollTrigger:{
+        trigger:".scroll-trigger",
+        // markers:true,
+        start:"top top",
+        end:"top bottom ",
+        toggleActions:"restart none reverse none"
+
+    },  
+    opacity:0,
+    duration:.5
+})
+
+// }
+// }
+
+
+// myMediaQuery.addEventListener('change', ()=>{
+//     widthChangeCallback(myMediaQuery);
+// });
+
+
 
 // var c=window.getComputedStyle(document.querySelector('.li-1'), ':before').getPropertyValue('content');
 // c.addEventListener("mouseover",()=>{
