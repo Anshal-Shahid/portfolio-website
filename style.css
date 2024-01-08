@@ -178,6 +178,7 @@
                 position: sticky;
                 top: 0;
                 opacity: 1 !important;
+                transform:scale( 1) !important;
             }
             .scroll-nav{
                 display: none;
@@ -660,27 +661,45 @@
         }
 
         .icon-desc :nth-child(1) {
-            font-size: 3.5rem;
+            font-size: 6vw;
             color: white;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
 
         .icon-desc :nth-child(2) {
-            font-size: 1.1rem;
+            font-size: 1.9vw;
+            /* background-color: #e1e1e1; */
+            width: 18vw;
             text-transform: capitalize;
             position: absolute;
             bottom: 0;
+            
             color: rgb(98, 255, 255, 0.7);
         }
 
         @media (max-width:700px) {
+
+            .icon-desc :nth-child(1){
+                font-size: 12vw;
+            }
+            .icon-desc :nth-child(2){
+                font-size: 5.5vw;
+                /* position: relative; */
+                /* top: .1vh; */
+                position: relative;
+                text-align: center;
+                width:50vw;
+                bottom: 1vh;
+                /* background-color: #e1e1e1; */
+            }
+
             .section-5 {
                 padding: 2vh 4vw;
                 flex-direction: column;
                 height: 120vh;
                 gap: 17vh;
                 align-items: center;
-
+        
             }
 
             
@@ -693,7 +712,7 @@
 
             .icon-div .icon-desc {
                 gap: 3vh;
-
+            
                 padding-bottom: 4vh;
                 width: 100%;
                 align-items: center;
@@ -711,11 +730,12 @@
 
         .section-6 {
             width: 100%;
-            height: 100vh;
+            height: 110vh;
             display: flex;
             justify-content: center;
             position: relative;
-            background-color: rgba(66, 70, 75, 0.6);
+            /* background-color: rgba(66, 70, 75, 0.6); */
+        
         }
 
         .section-6-div {
@@ -911,7 +931,9 @@
             .third-content {
                 position: unset;
             }
-
+            .section-6{
+                height: 175vh;
+            }
             .section-6-div {
                 align-items: center;
 
@@ -977,9 +999,37 @@
 
         }
 
+        /* footer */
 
 
+        footer{
+            /* background-color: antiquewhite; */
+            height: 25vh;
+            /* color: #07070c; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(56, 56, 56,0.9);
+            font-size: 1.25rem;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        footer p{
+            /* background-color: #e1e1e1; */
+            
+        }
+        footer span{
+            color: rgb(98, 255, 255, .9);
+        }
 
+        @media (max-width:700px){
+            footer{
+                padding: 0 1vw;
+                height: 15vh;
+            }
+            footer p{
+                font-size: 3.8vw;
+            }
+        }
 
         /* universal */
         .hide {
